@@ -3,7 +3,7 @@ import numpy as np
 
 #Lattice size 
 
-L = 3 #2 by 2 lattice
+L = 2 #2 by 2 lattice
 nqubits = L*L #calculates the total number of qubits on the lattice edges, for L = 2 there are 4 edges and therefore 4 qubit edges
 
 #this creates a lattice of this form 
