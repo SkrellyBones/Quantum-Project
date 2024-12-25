@@ -1,9 +1,9 @@
 from qutip import *
 import numpy as np
-
+import matplotlib.pyplot as plot
 #Lattice size 
 
-L = 3 #2 by 2 lattice
+L = 2 #2 by 2 lattice
 nqubits = L*L #calculates the total number of qubits on the lattice edges, for L = 2 there are 4 edges and therefore 4 qubit edges
 
 #this creates a lattice of this form 
@@ -51,4 +51,13 @@ for i in range(nqubits):
     eigenenergies,eigenstates = H.eigenstates()
     
 print("Eigenenergies:",eigenenergies)
-print("Eigenstates:", eigenstates)
+#print("Eigenstates:", eigenstates)
+
+#create a bloch sphere representation of the system
+# b = Bloch()
+# for state in eigenstates:
+#     b.add_states(state)
+
+
+hinton(H)
+plot.show()

@@ -1,3 +1,5 @@
+#script to visualize a degenerate Hilbert space, in which multiple eigenstates share the same eigenvalue
+
 from qutip import *
 import numpy as np
  # Define a 2-level system 
