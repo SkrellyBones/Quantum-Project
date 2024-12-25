@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-#literally googled "generate chaotic noise in python" and this came up in the fucking ai search lmao
+#script to generate chaotic noise using a logistic map
 
 def logistic_map(x, r):
   return r * x * (1 - x)
@@ -12,7 +12,7 @@ def generate_chaotic_noise(x0, r, n):
     x[i] = logistic_map(x[i-1], r)
   return x
 
-# Generate chaotic noise
+#Actually generate the chaotic noise
 x0 = 0.5
 r = 3.9
 n = 1000
