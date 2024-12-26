@@ -51,6 +51,7 @@ for i in range(nqubits):
     eigenenergies,eigenstates = H.eigenstates()
     
 print("Eigenenergies:",eigenenergies)
+<<<<<<< HEAD
 #print("Eigenstates:", eigenstates)
 
 #create a bloch sphere representation of the system
@@ -61,3 +62,6 @@ print("Eigenenergies:",eigenenergies)
 
 hinton(H)
 plot.show()
+=======
+print("Eigenstates:", eigenstates)
+>>>>>>> 57abc50a28e13baaf85972832e7059283ce15504
