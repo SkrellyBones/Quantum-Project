@@ -64,4 +64,4 @@ hinton(H)
 plot.show()
 =======
 print("Eigenstates:", eigenstates)
->>>>>>> 57abc50a28e13baaf85972832e7059283ce15504
+
