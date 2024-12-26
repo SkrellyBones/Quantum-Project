@@ -3,15 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plot
 #Lattice size 
 
-L = 2 #2 by 2 lattice
+L = 1 #2 by 2 lattice
 nqubits = L*L #calculates the total number of qubits on the lattice edges, for L = 2 there are 4 edges and therefore 4 qubit edges
 
 #this creates a lattice of this form 
 
- #   •---•---•
+ #   .--- ---.
  #   |       |        
  #   |       |
- #   •---•---•
+ #   .--- ---.
 
 #where its a 2x2 lattice, each vertex is a dot and  _ is a horizontal edge and  | is a vertical edge
 
@@ -48,19 +48,23 @@ for i in range(nqubits):
     H -=star(i,L)
     H -=plaq(i,L)
 #diagonalize the hamiltonian
-    eigenenergies,eigenstates = H.eigenstates()
+eigenenergies,eigenstates = H.eigenstates()
     
 print("Eigenenergies:",eigenenergies)
+print(len(eigenenergies))
+#create a bloch sphere that shows all the states
+b =Bloch()
+i= 0
+for state in eigenstates:
+   for i in range(nqubits):  # Adjust to the number of subsystems
+        hn = state.ptrace(i)  # Partial trace for the i-th subsystem
+        b.add_states(hn, kind='point')  # Add to Bloch sphere
+print(state.dims)
+b.show()
 #print("Eigenstates:", eigenstates)
-
-#create a bloch sphere representation of the system
-# b = Bloch()
-# for state in eigenstates:
-#     b.add_states(state)
-
 
 hinton(H)
 plot.show()
 
-print("Eigenstates:", eigenstates)
+#print("Eigenstates:", eigenstates)
 
