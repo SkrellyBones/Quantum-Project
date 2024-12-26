@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plot
 #Lattice size 
 
-L = 1 #2 by 2 lattice
+L = 2 #2 by 2 lattice
 nqubits = L*L #calculates the total number of qubits on the lattice edges, for L = 2 there are 4 edges and therefore 4 qubit edges
 
 #this creates a lattice of this form 
@@ -64,6 +64,7 @@ b.show()
 #print("Eigenstates:", eigenstates)
 
 hinton(H)
+matrix_histogram(H)
 plot.show()
 
 #print("Eigenstates:", eigenstates)
