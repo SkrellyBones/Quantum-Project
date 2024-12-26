@@ -62,6 +62,6 @@ print("Eigenenergies:",eigenenergies)
 
 hinton(H)
 plot.show()
-=======
+
 print("Eigenstates:", eigenstates)
 
